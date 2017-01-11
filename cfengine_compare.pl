@@ -116,8 +116,8 @@ while (my $file = readdir $dh) {
 		say "Found Match at $match";
 
 		# Using system diff instead of Text:Diff library for portability
-		system("diff $match $path/$file");
-		# say diff($match, $_);
+		system("diff $path/$file $match");
+		# say diff($path/$file, $match);
 
 	} else {
 		say "No match found!"
